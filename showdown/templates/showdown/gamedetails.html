@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{ detail.gamename }}</h2>
+<p> {{detail.minnumberplayers}} - {{ detail.maxnumberplayers}} players </p>
+<p>Game play length: {{detail.gameplaylength}} min </p>
+{% if detail.iscooperative %}
+<p>Cooperative</p>
+{% else %}
+<p>Competitive</p>
+{% endif %}
+
+{% endblock %}

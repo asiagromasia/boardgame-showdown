@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{ detail.date }}</h2>
+
+<p>Time: {{detail.time}}</p>
+<p>Location: {{detail.location}}</p>
+<p>Participants</p>
+<ul> 
+   {% for participant in detail.participants.all %}
+   <li>{{ participant }}</li>
+   {% endfor %} 
+</ul>
+<p> Board Games </p>
+<ul> 
+    {% for game in detail.games.all %}
+    <li>{{ game }}</li>
+    {% endfor %} 
+ </ul>
+
+{% endblock %}

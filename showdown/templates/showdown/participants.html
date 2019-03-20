@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2> Participant </h2>
+<table class='table'>
+    <tr>
+        <th>Players:</th>
+        <th>Score: </th> 
+    </tr>
+    {% for item in participant_list %}
+    <tr>
+        <td><a href="{% url 'participantdetail' id=item.id %}">{{ item.name }}</a></td>
+        <td>{{ item.score }}</td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+
+{% endblock %}

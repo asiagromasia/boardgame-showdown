@@ -35,7 +35,7 @@ class Event(models.Model):
     games = models.ManyToManyField(BoardGame)
 
     def __str__(self):
-        return 'Showdown Event on ' + self.date
+        return 'Showdown Event on ' + str(self.date)
 
     class Meta:
         db_table = 'event'
