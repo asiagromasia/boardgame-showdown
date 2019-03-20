@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{ detail.name }}</h2>
+
+<p>{{detail.score}}</p>
+<p>{{detail.bio}}</p>
+
+{% if detail.paid %}
+<p>Fee paid</p>
+{% else %}
+<p>Pay entry fee </p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2> Event </h2>
+<table class='table'>
+    <tr>
+        <th>Event Date:</th>
+    </tr>
+    {% for item in event_list %}
+    <tr>
+        <td><a href="{% url 'eventdetail' id=item.id %}">{{ item.date }}</a></td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+
+{% endblock %}
