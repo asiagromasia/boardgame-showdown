@@ -10,4 +10,7 @@ urlpatterns=[
     path('participantdetails/<int:id>', views.participantdetail, name='participantdetail'),
     path('event/', views.event, name ='event'),
     path('eventdetails/<int:id>', views.eventdetail, name='eventdetail'),
+    path('newGame/', views.newGame, name ='newgame'),
+    path('newParticipant/', views.newParticipant, name ='newparticipant'),
+    path('newEvent/', views.newEvent, name ='newevent'),
 ]
