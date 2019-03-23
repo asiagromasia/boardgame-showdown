@@ -1,31 +1,37 @@
 <!DOCTYPE html>
- <html> 
-<head> 
-<title>Board Game Showdown</title> 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
-<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
-</head> 
-<body> 
-<div class='jumbotron'> 
-<h1>Board Game Showdown</h1>
- </div> 
-   <nav class="navbar navbar-default"> 
-   <div class="container-fluid">
-<div class="navbar-header"> 
-<a class="navbar-brand" href="{% url 'index' %}">Board Game Showdown</a> 
-</div> 
-<ul class="nav navbar-nav"> 
-<li><a href="{% url 'boardgames' %}">Board Games</a></li>
-<li><a href="{% url 'participant' %}">Participants</a></li>
-<li><a href="{% url 'event' %}">Events</a></li>
-</ul> 
-</div> 
-</nav> 
-<div class="container-fluid"> 
-{% block content %} 
+<html>
 
-{% endblock content %} 
-</div> 
-</body> 
+<head>
+  <title>Board Game Showdown</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class='jumbotron'>
+    <h1>Board Game Showdown</h1>
+  </div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'index' %}">Board Game Showdown</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'boardgames' %}">Board Games</a></li>
+        <li><a href="{% url 'participant' %}">Participants</a></li>
+        <li><a href="{% url 'event' %}">Events</a></li>
+        <li><a href="{% url 'newgame' %}">Add New Board Game!</a></li>
+        <li><a href="{% url 'newparticipant' %}">Add New Participant!</a></li>
+        <li><a href="{% url 'newevent' %}">Add Event!</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    {% block content %}
+
+    {% endblock content %}
+  </div>
+</body>
+
 </html>
