@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import BoardGame, Participant, Event 
 from .forms import BoardGameForm, ParticipantForm, EventForm
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 def index(request):
     return render(request, 'showdown/index.html')
@@ -31,6 +33,7 @@ def eventdetail (request, id):
 
 #form views
 
+@login_required
 def newGame (request):
     form = BoardGameForm
     if request.method=='POST':
@@ -43,7 +46,7 @@ def newGame (request):
         form=BoardGameForm()
     return render(request, 'showdown/newgame.html', {'form': form})
 
-
+@login_required
 def newParticipant (request):
     form = ParticipantForm
     if request.method=='POST':
@@ -56,6 +59,7 @@ def newParticipant (request):
         form=ParticipantForm()
     return render(request, 'showdown/newparticipant.html', {'form': form})
 
+@login_required
 def newEvent (request):
     form = EventForm
     if request.method=='POST':
@@ -67,3 +71,9 @@ def newEvent (request):
     else: 
         form=EventForm()
     return render(request, 'showdown/newevent.html', {'form': form})
+
+def loginmessage(request):
+    return render(request, 'showdown/loginmessage.html')
+
+def logoutmessage(request):
+    return render(request, 'showdown/logoutmessage.html')

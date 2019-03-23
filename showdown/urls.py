@@ -13,4 +13,6 @@ urlpatterns=[
     path('newGame/', views.newGame, name ='newgame'),
     path('newParticipant/', views.newParticipant, name ='newparticipant'),
     path('newEvent/', views.newEvent, name ='newevent'),
+    path('loginmessage', views.loginmessage, name='loginmessage'),
+    path('logoutmessage', views.logoutmessage, name='logoutmessage'),
 ]
